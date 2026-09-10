@@ -1,85 +1,80 @@
 # Linked List Implementation in JavaScript
 
-## 📌 Overview
-This project is a custom implementation of a **singly linked list** in JavaScript. It provides essential linked list operations, including adding, removing, searching, and traversing nodes. The implementation follows an **object-oriented approach**, using **ES6 classes** with **encapsulation** for better maintainability.
+## Overview
+This project is a simple JavaScript implementation of a singly linked list. It includes the basic operations you would expect from a linked list, such as adding items, removing them, searching for values, and walking through the list.
 
-## 🚀 Features
-- **Appending**: Add a node to the end of the list.
-- **Prepending**: Add a node to the beginning of the list.
-- **Size Calculation**: Get the number of nodes in the list.
-- **Access by Index**: Retrieve a node at a specific position.
-- **Remove Operations**:
-  - Remove the last node (`pop`).
-  - Remove a node at a given index (`removeAt`).
-- **Search Operations**:
-  - Check if a value exists (`contains`).
-  - Find the index of a specific value (`find`).
-- **Insertion at an Index**: Insert a node at a specific position.
-- **String Representation**: Convert the list to a formatted string (`toString`).
+The code is written with a small object-oriented structure and keeps the logic focused on the list itself rather than on any framework or external library.
 
-## 🛠️ Installation
-No external dependencies are required. To use this implementation:
+## Features
+- Append a value to the end of the list
+- Prepend a value to the beginning of the list
+- Get the current size of the list
+- Access a node by its index
+- Remove the last item
+- Remove an item at a specific index
+- Check whether a value exists in the list
+- Find the index of a value
+- Insert a value at a selected position
+- Convert the list into a readable string form
 
-1. Clone the repository or copy the `linked-list.js` file.
-2. Import the `LinkedList` class in your JavaScript project:
+## Installation
+There are no external dependencies to install. You can use the file directly in a JavaScript project by importing the class:
 
 ```js
 import { LinkedList } from './linked-list.js';
 ```
 
-## 📜 Usage
-### 1️⃣ Create a Linked List
+## Usage
+### Create a linked list
 ```js
 const list = new LinkedList();
 ```
 
-### 2️⃣ Add Nodes
+### Add nodes
 ```js
-list.append(10); // Adds 10 to the end
-list.append(20); // Adds 20 after 10
-list.prepend(5); // Adds 5 to the beginning
+list.append(10);
+list.append(20);
+list.prepend(5);
 ```
 
-### 3️⃣ Get List Size
+### Check the size
 ```js
-console.log(list.size()); // Outputs: 3
+console.log(list.size()); // 3
 ```
 
-### 4️⃣ Find Nodes by Index
+### Access a node by index
 ```js
-console.log(list.at(1)); // Outputs: Node containing 10
+console.log(list.at(1)); // node containing 10
 ```
 
-### 5️⃣ Remove Nodes
+### Remove nodes
 ```js
-list.pop(); // Removes last node (20)
-list.removeAt(0); // Removes first node (5)
+list.pop();
+list.removeAt(0);
 ```
 
-### 6️⃣ Check if a Value Exists
+### Search for a value
 ```js
 console.log(list.contains(10)); // true
 console.log(list.contains(50)); // false
 ```
 
-### 7️⃣ Convert to String
+### Turn the list into a string
 ```js
-console.log(list.toString()); // "( 10 ) -> null"
+console.log(list.toString()); // ( 10 ) -> null
 ```
 
-## 🧪 Edge Cases Handled
-- Removing the last node properly updates both `head` and `tail`.
-- Removing from an empty list does nothing.
-- Searching for an index out of bounds returns `null`.
-- Inserting at an index greater than the list size is ignored.
-- Removing the only node in the list sets both `head` and `tail` to `null`.
+## Edge cases covered
+- Removing the final node correctly updates both the head and tail
+- Removing from an empty list does nothing
+- Accessing an index outside the list returns null
+- Inserting past the end of the list is ignored
+- Removing the only remaining node clears both head and tail
 
-## 📌 Future Improvements
-- Implement a **doubly linked list** for more efficient `removeAt()` operations.
-- Add **reverse()** functionality to reverse the list in place.
-- Support **iterators** for `for...of` loops.
+## Possible improvements
+- Add a doubly linked list version
+- Add a reverse method
+- Support iteration with for...of
 
----
-
-💡 **Created with The Odin Project assignments in mind!** 🚀
+This project is a small, practical example of how a linked list can be built and used in JavaScript.
 
